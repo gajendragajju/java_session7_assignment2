@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+    public class TestException {
+
+        static int input;
+        static Scanner scan = new Scanner(System.in);
+
+        public static void main(String[] args) {
+            System.out.println("Enter an integer number: ");
+
+            try {
+                input = Integer.parseInt(scan.next());
+                System.out.println("You've entered number: " + input);
+            } catch (NumberFormatException e) {
+                System.out.println("You've entered non-integer number");
+                System.out.println("This caused " + e);
+            }
+        }
+    }
